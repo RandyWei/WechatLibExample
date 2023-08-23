@@ -1,4 +1,4 @@
-rootProject.name = "MyApplication"
+rootProject.name = "WechatLibExample"
 
 include(":androidApp")
 include(":shared")
