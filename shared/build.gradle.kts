@@ -23,6 +23,11 @@ kotlin {
             isStatic = true
         }
         extraSpecAttributes["resources"] = "['src/commonMain/resources/**', 'src/iosMain/resources/**']"
+
+        pod("WechatOpenSDK-XCFramework"){
+            linkOnly = true
+            version = "2.0.2"
+        }
     }
 
     sourceSets {
@@ -30,9 +35,11 @@ kotlin {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
-                implementation(compose.material)
+                implementation(compose.material3)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+
+                implementation(project(":WechatLib"))
             }
         }
         val androidMain by getting {

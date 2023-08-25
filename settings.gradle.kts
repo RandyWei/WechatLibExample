@@ -2,6 +2,8 @@ rootProject.name = "WechatLibExample"
 
 include(":androidApp")
 include(":shared")
+include("WechatLib")
+project(":WechatLib").projectDir = file("/Users/wei/AndroidStudioProjects/WechatLib/Wechat")
 
 pluginManagement {
     repositories {
